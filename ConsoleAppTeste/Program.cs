@@ -39,16 +39,16 @@ Console.WriteLine("Hello, World!");
 //var margem = Financeiro.CalcularMargemDelucro(9.90, 19.90);
 //Console.WriteLine($"Margem de Lucro: {margem}");
 
-//var data = BoletoBancario.ExtrairDataDeVencimento("75691307060103197750560587010160795600000009990");
-//Console.WriteLine($"Data: {data}");
+var data = BoletoBancario.ExtrairDataDeVencimento("75691307060103197750560587010160795600000009990");
+Console.WriteLine($"Data: {data}");
 
-//var data1 = BoletoBancario.ExtrairDataDeVencimento("75699956000000099901307001031977506058550001");
-//Console.WriteLine($"Data: {data1}");
+var data1 = BoletoBancario.ExtrairDataDeVencimento("75699956000000099901307001031977506058550001");
+Console.WriteLine($"Data: {data1}");
 
-//Console.WriteLine($"Banco: {BoletoBancario.ExtrarCodigoBanco("75691307060103197750560587010160795600000009990")}");
+Console.WriteLine($"Banco: {BoletoBancario.ExtrarCodigoBanco("75691307060103197750560587010160795600000009990")}");
 
-//var valor = BoletoBancario.ExtrairValor("10496229948000010004200031693484795610000021528").ToString("N2");
-//Console.WriteLine($"Valor R$ {valor}");
+var valor = BoletoBancario.ExtrairValor("10496229948000010004200031693484795610000021528").ToString("N2");
+Console.WriteLine($"Valor R$ {valor}");
 
 //var parcelas = Parcelador.GerarParcelas((decimal)569.40, 3);
 //foreach (var p in parcelas)
@@ -93,21 +93,21 @@ List<Parcela> parcelas = [];
 //Console.ReadLine();
 //parcelas = Parcelador.GerarParcelas(valor, 12);
 
-for (int i = 0; i < QTD_TESTES; i++)
-{
-    var valor = NextDouble(random, VL_MINIMO, VL_MAXIMO);
-    valor = Math.Round(valor, 2);
-    Console.WriteLine("");
-    Console.WriteLine($"Valor: R$ {valor}");
-    parcelas = Parcelador.GerarParcelas(valor, 4);
+//for (int i = 0; i < QTD_TESTES; i++)
+//{
+//    var valor = NextDouble(random, VL_MINIMO, VL_MAXIMO);
+//    valor = Math.Round(valor, 2);
+//    Console.WriteLine("");
+//    Console.WriteLine($"Valor: R$ {valor}");
+//    parcelas = Parcelador.GerarParcelas(valor, 4);
     
-    foreach (var p in parcelas)
-    {
-        Console.WriteLine($"{p.Numero+1} | R$ {p.Valor} | {p.DataVencimento.ToShortDateString()}");
-    }
+//    foreach (var p in parcelas)
+//    {
+//        Console.WriteLine($"{p.Numero+1} | R$ {p.Valor} | {p.DataVencimento.ToShortDateString()}");
+//    }
     
-    Console.WriteLine($"------------------------");
-}
+//    Console.WriteLine($"------------------------");
+//}
 
 //foreach (var p in parcelas)
 //{
